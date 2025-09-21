@@ -1,0 +1,24 @@
+Chapter 9 — Multiple Choice Answers
+
+1) instantiation
+2) initial field values
+3) private
+4) public
+5) never
+6) new
+7) c) public MyClass()
+8) d) public void MyClass()
+9) public and nonstatic
+10) a) The property name is letterGrade.  (cannot be same as field)
+11) implicitly passed to nonstatic methods
+12) can
+13) sets numeric fields to 0
+14) c) Chair(int legs)   (ambiguous with Chair(int height))
+15) c) House myHouse = new House(4, 200000)   (intended correct form)
+16) You never explicitly call a destructor.
+17) d) five; five
+18) b) myChairs[199].WoodType
+19) a) an interface
+20) write a CompareTo() method for the class
+
+EOF
