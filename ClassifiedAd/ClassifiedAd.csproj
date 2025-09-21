@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>
+EOF
+mkdir -p PaintingDemo
+cat > PaintingDemo/Program.cs
+using System;
+
+public class Room
+{
+    private double _length, _width, _height;
+    private double _wallArea;      // computed
+    private int _gallonsNeeded;    // computed
+
+    public Room(double length, double width, double height)
+    {
+        _length = Math.Max(0, length);
+        _width  = Math.Max(0, width);
+        _height = Math.Max(0, height);
+        _wallArea = ComputeWallArea();
+        _gallonsNeeded = ComputeGallons(_wallArea);
+    }
+
+    public double Length => _length;
+    public double Width  => _width;
+    public double Height => _height;
+    public double WallArea => _wallArea;
+    public int GallonsNeeded => _gallonsNeeded;
+
+    // four walls; no doors/windows; no ceiling paint
+    private double ComputeWallArea() => 2 * (_length + _width) * _height;
+
+    // 1 gallon per 350 sq ft; any remainder needs an extra gallon
+    private int ComputeGallons(double area) => (int)Math.Ceiling(area / 350.0);
+}
+
+public class PaintingDemo
+{
+    public static void Main()
+    {
+        Room[] rooms =
+        {
+            new Room(12,10,9),   // example from prompt: 396 sq ft -> 2 gallons
+            new Room(15,12,8),
+            new Room(10,10,10),
+            new Room(20,14,9),
+            new Room(11,9,8),
+            new Room(9,9,9),
+            new Room(25,12,10),
+            new Room(13,11,9)
+        };
+
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            var r = rooms[i];
+            Console.WriteLine($"Room #{i+1}: {r.Length} x {r.Width} x {r.Height} ft");
+            Console.WriteLine($"  Wall area:     {r.WallArea:F1} sq ft");
+            Console.WriteLine($"  Gallons paint: {r.GallonsNeeded}");
+            Console.WriteLine(new string('-', 32));
+        }
+    }
+}
+EOF
