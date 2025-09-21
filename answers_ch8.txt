@@ -1,0 +1,23 @@
+Chapter 8 — Multiple Choice Answers
+
+1) a) requires an argument to be sent from a method call
+2) forensic
+3) d) a reference parameter and an output parameter
+4) b) a data type
+5) b) 125
+6) a) 100
+7) requires an initial value
+8) a) is declared using the keyword params
+9) d) DisplayScores(20.0, 30.0)
+10) b) identifier
+11) c) are indistinguishable to the compiler
+12) private static void MethodA(int a) / private static void MethodA(int b, double c)
+13) private static void Method(double d) / private static int Method()
+14) resolution
+15) b) a default value will be assigned to the parameter if no argument is sent for it
+16) private static void CreateStatement(int acctNum = 0, double balance) ← illegal (required after optional)
+17) ComputeBill(1001, 200.00)
+18) CalculateDiscount()
+19) d) DisplayData(amount: "Juan")
+20) private static void TotalScores(int[] scores, int num)
+EOF
