@@ -1,0 +1,22 @@
+Chapter 7 — Multiple Choice Answers
+
+1) d) any number of
+2) a) Methods are easily reusable.
+3) a) a header
+4) private (default accessibility for methods without an explicit modifier)
+5) b) a return type
+6) public
+7) b) is called without an object reference
+8) a) return type
+9) c) implementation hiding
+10) an initial value for the parameter
+11) AMethod(myAge);
+12) b) might contain a declared double named rate
+13) actual
+14) any legal identifier
+15) private static void CalcDifference(double price1, double price2)
+16) private static void CalcSum(double firstValue, double secondValue)
+17) pay = CalcPay(hours);
+18) a) Only IsRateOK() executes.
+19) c) Both execute.
+20) reference
